@@ -1,0 +1,28 @@
+.loginPage{
+    height: 80vh;
+}
+
+.loginForm{
+    background-color: #8E8FFA;
+    height: 50vh;
+    border-radius: 5px;
+   
+}
+
+.employee_image{
+
+    border-radius: 50%;
+}
+
+.imagen-logo{
+    width: 50px;
+    height: 10px;
+}
+
+.form{
+    margin-top: 8%;
+}
+
+.create{
+    cursor: pointer;
+}

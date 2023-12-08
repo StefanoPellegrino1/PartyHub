@@ -1,0 +1,63 @@
+.seller-grande{
+   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seller-mediana{
+   background-color: blueviolet;
+   
+    border-radius: 3%;
+    box-shadow: 22px 22px 23px -15px rgba(0,0,0,0.64);
+    width: 90vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.datos-fiesta{
+    
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vender-entrada{
+    
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entradas-venta{
+    
+    width: 80%;
+    height: 80%;
+}
+
+.input-seller{
+    width: 50%;
+}
+
+.datos-venta{
+    
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+.vender-footer{
+    
+    
+}
+
+.boton-seller{
+    width: 100%;
+    background-color: violet;
+}
