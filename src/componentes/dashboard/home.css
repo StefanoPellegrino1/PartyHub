@@ -11,7 +11,7 @@ body{
 
 .body{
    
-    height: 100vh;
+    
 }
 
 .caja-grande{
@@ -149,3 +149,52 @@ body{
     margin-bottom: 2%;
     font-weight: 500;
 }
+
+
+/* responsive */
+
+.responsive{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+   
+    height: 94.5vh;
+}
+
+.cajas-datos{
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+}
+
+.cada-caja{
+    width: 25%;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+    background-color: lightblue;
+
+    }
+    
+    .responsive{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+  
+    .cajas-datos{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+      width: 100%;
+    }
+
+    .cada-caja{
+        width: 80%;
+        margin-bottom: 1%;
+    }
+    }
+
+    

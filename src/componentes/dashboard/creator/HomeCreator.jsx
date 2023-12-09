@@ -185,7 +185,7 @@ const iD = id.substr(1)
    
    
   return (
-    <div className='body'>
+    <div className='body responsive'>
       <div className='p-3 d-flex  justify-content-center '>
         <div className='p-3 d-flex flex-column justify-content-center'>
                     <h1 >{fiesta.nombre}</h1>
@@ -194,9 +194,9 @@ const iD = id.substr(1)
 
       </div>
 
-      <div className='p-3 d-flex justify-content-around '>
+      <div className=' cajas-datos'>
       
-        <div className='px-3 pt-2 pb-3 border shadow-sm w-25'>
+        <div className='px-3 pt-2 pb-3 border shadow-sm cada-caja'>
          
           <div className="text-center pb-1">
             <h4>Entradas </h4>
@@ -214,7 +214,8 @@ const iD = id.substr(1)
 
           </div>
         </div>
-        <div className="px-3 pt-2 pb-3 border shadow-sm w-25">
+
+        <div className="px-3 pt-2 pb-3 border shadow-sm cada-caja">
           <div className="text-center pb-1">
             <h4>Vendedores</h4>
           </div>
@@ -224,7 +225,7 @@ const iD = id.substr(1)
             <h5>{cantidadVendedores}</h5>
           </div>
         </div>
-        <div className="px-3 pt-2 pb-3 border shadow-sm w-25">
+        <div className="px-3 pt-2 pb-3 border shadow-sm cada-caja">
           <div className="text-center pb-1">
             <h4>Plata recaudada:</h4>
           </div>
@@ -236,7 +237,8 @@ const iD = id.substr(1)
         </div>
         
       </div>
-       <div className='mt-4 px-5 pt-3 '>
+      <div>
+        <div className='mt-4 px-5 pt-3 '>
          <h3>INVITATION CODE</h3>
          <h5 className='m-2'>Code: {fiesta.codigo}</h5>
          <button className='btn btn-secondary m-2' onClick={() => navigator.clipboard.writeText(fiesta.codigo)}>Copy Code</button>
@@ -247,6 +249,8 @@ const iD = id.substr(1)
         <h3>Lote actual: </h3>
         <h4 className='m-2'>{loteActual}</h4>
        </div>
+      </div>
+
        
     </div>
   )
