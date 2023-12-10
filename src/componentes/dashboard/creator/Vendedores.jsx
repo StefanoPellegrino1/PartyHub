@@ -97,7 +97,7 @@ const Vendedores = ({token}) => {
                  <h2>VENDEDORES</h2>
           </div>
           <div className='d-flex justify-content-center'>
-            <div className='w-50'>
+            <div className=''>
            <table className='table items '> 
            
 
@@ -128,7 +128,7 @@ const Vendedores = ({token}) => {
                      <td>{index +1}</td> 
                      <td >{item.nombreYapellido}</td>
                     <td>
-                        {item.mail}
+                        0
                     </td>
                </tr>  
            )}

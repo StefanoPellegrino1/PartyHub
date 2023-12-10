@@ -171,6 +171,30 @@ body{
     width: 25%;
 }
 
+.r{
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s{
+    width: 100%;
+}
+
+.b{
+    width: 60%;
+}
+
+.li{
+    margin-left: 4%;
+}
+
+.acciones-drop{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-around;
+}
 
 @media screen and (max-width: 768px) {
     body {

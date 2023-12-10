@@ -65,26 +65,26 @@ const Dashboard = () => {
                    <span className=''> Dashboard</span> 
                  </Link>
         <li class="nav-item">
-        <Link className='nav-link active px-0 align-middle ' to={'/dashboard/lotes/'+ id}>
+        <Link className='nav-link active px-10 align-middle ' to={'/dashboard/lotes/'+ id}>
                     
                     <span className=''>Lotes</span>
                     
            </Link>
         </li>
         <li class="nav-item ">
-                <Link className='nav-link active px-0 align-middle ' to={'/dashboard/vendedores/'+ id}>
+                <Link className='nav-link active px-10 align-middle ' to={'/dashboard/vendedores/'+ id}>
                     
                     <span className=''>Vendedores</span>
                  </Link>
         </li>
         <li class="nav-item">
-        <Link className='nav-link active '>
+        <Link className='nav-link active px-10 align-middle '>
                     
                     <span data-bs-toggle="modal" data-bs-target="#sellPartyModal" className=''>Vender entrada</span>
           </Link>
         </li>
-        <li>
-        <Link aria-current="page"   to='/home' className='nav-link active px-0 align-middle ' >
+        <li class="nav-item">
+        <Link aria-current="page"   to='/home' className='nav-link active px-10 align-middle ' >
                     
                     <span className=''>Back to parties</span>
           </Link>
