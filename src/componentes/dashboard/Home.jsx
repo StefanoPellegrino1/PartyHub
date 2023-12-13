@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable eqeqeq */
 import React, { useEffect, useState } from "react";
 import "./home.css";
@@ -162,7 +163,7 @@ const Home = ({ token }) => {
       .from("joined_parties")
       .insert([{ user_id: id, party_code: codigo }]);
 
-    window.location.replace("");
+      location.reload(true);
   };
 
   const tocaFiesta = async (c) => {};
@@ -188,7 +189,8 @@ const Home = ({ token }) => {
         throw error;
       }
     }
-    window.location.replace("");
+    // eslint-disable-next-line no-restricted-globals
+    location.reload(true);
   };
 
   fiestasTodas.map((fiesta) => {
@@ -215,7 +217,7 @@ const Home = ({ token }) => {
     setTimeout(() => {
       setLoadingModal(false);
       handleSubmit();
-      window.location.replace("");
+      location.reload(true);
     }, 1000); // Simula una demora de 2 segundos
   };
 

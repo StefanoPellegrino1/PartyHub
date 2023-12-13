@@ -52,7 +52,7 @@ function App() {
       {/* <Route  path='/start' element={<Start/>}></Route>  */}
        <Route  path='' element={<Login token={token} setToken={setToken}/>}></Route> 
        <Route  path='/CreateAccount' element={<CreateUser/>}></Route> 
-    {token ? <Route path='home' element={<Home token={token}/>}></Route> :  <Route  path='' element={<Login token={token} setToken={setToken}/>}></Route>  }
+    {token ? <Route path='home' element={<Home token={token}/>}></Route> :'' }
     {token ?  <Route  path='/dashboard' element={<Dashboard/>}> 
       <Route path='fiesta/:id' element={<HomeCreator/>}></Route>
       <Route path='VenderEntrada/:id' element={<VenderEntrada/>}></Route>

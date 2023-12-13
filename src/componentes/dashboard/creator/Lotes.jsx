@@ -100,7 +100,8 @@ const Lotes = () => {
       }
     };
     agregarLote();
-    window.location.replace('')
+    // eslint-disable-next-line no-restricted-globals
+    location.reload(true);
   };
 
   return (
