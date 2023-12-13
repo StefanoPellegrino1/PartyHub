@@ -103,11 +103,13 @@ const Lotes = () => {
           setErrorLote(null);
           console.log(data);
         }
+        
       }
+       recargarPagina()
     };
     agregarLote();
    
-    recargarPagina()
+   
   };
 
   return (
