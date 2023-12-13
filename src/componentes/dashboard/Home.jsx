@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import supabase from "../../back/supabaseClient";
-import { BarLoader, FadeLoader } from "react-spinners";
+import { BarLoader, FadeLoader, HashLoader, MoonLoader, PacmanLoader } from "react-spinners";
 import Modal from "react-modal";
 import Logout from "./Logout";
 
@@ -35,6 +35,10 @@ const Home = ({ token }) => {
   const [fiestasJoined, setFiestasJoined] = useState([]);
 
   const [existe, setExiste] = useState(false);
+
+  const recargarPagina = () => {
+    window.location.reload(true); // Recargar forzadamente la página
+  };
 
   useEffect(() => {
     const fetchAllParties = async () => {
@@ -96,7 +100,15 @@ const Home = ({ token }) => {
 
       // termina
     };
+    
+    
+    
     fetchAllParties();
+
+
+
+
+
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -119,7 +131,7 @@ const Home = ({ token }) => {
 
       const { data, error } = await supabase
         .from("fiesta")
-        .insert([
+        .upsert([
           { nombre: nombre, id_user: id, codigo: codigo, fecha: fecha },
         ]);
 
@@ -132,6 +144,7 @@ const Home = ({ token }) => {
       }
     };
     agregarFiesta();
+    recargarPagina()
   };
 
   const buscarFiesta = async () => {
@@ -163,7 +176,7 @@ const Home = ({ token }) => {
       .from("joined_parties")
       .insert([{ user_id: id, party_code: codigo }]);
 
-      location.reload(true);
+      recargarPagina()
   };
 
   const tocaFiesta = async (c) => {};
@@ -211,13 +224,13 @@ const Home = ({ token }) => {
       setErrorCreate("Completa todos los campos");
       return;
     }
-
+      handleSubmit();
     setLoadingModal(true);
     // Simula una operación asíncrona (reemplaza con tu lógica para enviar datos a la base de datos)
     setTimeout(() => {
       setLoadingModal(false);
-      handleSubmit();
-      location.reload(true);
+      
+      
     }, 1000); // Simula una demora de 2 segundos
   };
 
@@ -270,7 +283,11 @@ const Home = ({ token }) => {
 
           <div className="parties">
             {loading ? (
-              <FadeLoader color="#36D7B7" loading={loading} />
+              <div className="caja-loader">
+                 <PacmanLoader className="loader"   size={50} color="#8E8FFA" loading={loading} />
+                 
+              </div>
+             
             ) : (
               <div className="parties">
                 {allParties &&

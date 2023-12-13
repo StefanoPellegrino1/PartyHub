@@ -137,6 +137,17 @@ body{
     height: 100%;
 }
 
+.caja-loader{
+   
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+}
+
+.loader{
+    height: 40px;
+}
 
 /* Modal */
 

@@ -101,7 +101,7 @@ const Lotes = () => {
     };
     agregarLote();
     // eslint-disable-next-line no-restricted-globals
-    location.reload(true);
+    
   };
 
   return (
