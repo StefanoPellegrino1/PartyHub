@@ -21,6 +21,12 @@ const Lotes = () => {
   const [error, setError] = useState(null);
   const [lote, setLote] = useState(null);
 
+
+  const recargarPagina = () => {
+    window.location.reload(true); // Recargar forzadamente la página
+  };
+
+
   useEffect(() => {
     const fetchLote = async () => {
       const { data, error } = await supabase
@@ -100,8 +106,8 @@ const Lotes = () => {
       }
     };
     agregarLote();
-    // eslint-disable-next-line no-restricted-globals
-    
+   
+    recargarPagina()
   };
 
   return (

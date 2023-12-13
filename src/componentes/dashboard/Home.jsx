@@ -114,7 +114,8 @@ const Home = ({ token }) => {
     }, 2000);
   }, []);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     if (!nombre || !fecha) {
       setErrorCreate("Completa todos los campos");
       return;
@@ -141,10 +142,12 @@ const Home = ({ token }) => {
       }
       if (data) {
         setErrorCreate(null);
+        
       }
+      recargarPagina()
     };
     agregarFiesta();
-    recargarPagina()
+    
   };
 
   const buscarFiesta = async () => {
@@ -176,7 +179,7 @@ const Home = ({ token }) => {
       .from("joined_parties")
       .insert([{ user_id: id, party_code: codigo }]);
 
-      recargarPagina()
+      
   };
 
   const tocaFiesta = async (c) => {};
@@ -370,10 +373,10 @@ const Home = ({ token }) => {
                         Close
                       </button>
                       <button
-                        type="submit"
+                        
                         class="btn btn-primary"
-                        onClick={handleModalSubmit}
-                        disabled={loadingModal}
+                        onClick={handleSubmit}
+                        
                       >
                         {loadingModal ? "Enviando..." : "Enviar Info"}
                       </button>
