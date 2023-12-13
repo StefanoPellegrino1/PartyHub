@@ -1,12 +1,21 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Link, Outlet, useNavigate, useParams } from 'react-router-dom'
 // import "bootstrap-icons/font/bootstrap-icons.css"
 import axios from 'axios'
 import VenderEntrada from './VenderEntrada'
+import { BarLoader } from 'react-spinners';
+
 
 const Dashboard = () => {
 
   const {id} = useParams()
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=> {
+
+    
+
+  }, [])
 
   return (
     <div className=''>

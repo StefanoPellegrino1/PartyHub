@@ -4,6 +4,7 @@ import './seller.css'
 import supabase from '../../back/supabaseClient'
 
 
+
 const SellerHome = () => { 
   let tokenId = JSON.parse(localStorage.getItem('tokenId'))
   const user_id = tokenId
@@ -196,10 +197,8 @@ const handleSubmit = async (e) =>{
     if(data){
       console.log(data3)
     }
-
+    window.location.replace('')
 }
-
-
 
 
 
@@ -223,7 +222,10 @@ return(
         <div className="entradas-venta">
         
           <h1 className='d-flex justify-content-center'> No tiene lotes</h1>
-
+          <div>
+      
+     
+    </div> 
           </div>
 
           :
@@ -312,9 +314,73 @@ return(
 
           }  
         </div>
-      </div>
+      </div> 
+     
     </div>
   </div>
 )
 }
 export default SellerHome
+
+
+// import React, { useState } from 'react';
+// import Modal from 'react-modal';
+
+
+
+// Modal.setAppElement('#root'); // Asocia el modal con tu aplicación
+
+// const TuComponente = () => {
+//   const [modalIsOpen, setModalIsOpen] = useState(false);
+//   const [loadingModal, setLoadingModal] = useState(false);
+
+//   const openModal = () => {
+//     setModalIsOpen(true);
+//   };
+
+//   const closeModal = () => {
+//     setModalIsOpen(false);
+//   };
+
+//   const handleModalSubmit = () => {
+//     setLoadingModal(true);
+//     // Simula una operación asíncrona (reemplaza con tu lógica para enviar datos a la base de datos)
+//     setTimeout(() => {
+//       setLoadingModal(false);
+//       console.log('Información enviada');
+//       closeModal();
+//     }, 2000); // Simula una demora de 2 segundos
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={openModal}>Abrir Modal</button>
+//       {modalIsOpen && <div className="overlay" onClick={closeModal}>f</div>}
+
+//       <Modal
+//         isOpen={modalIsOpen}
+//         onRequestClose={closeModal}
+//         contentLabel="Ejemplo Modal"
+//         style={{
+//           overlay: {
+//             backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo semitransparente
+//           },
+//           content: {
+//             width: '50%',
+//             margin: 'auto',
+//             maxHeight: '80vh',
+//           },
+//         }}
+//       >
+//         <h2>Contenido del Modal</h2>
+//         {/* Contenido del modal */}
+//         <button onClick={handleModalSubmit} disabled={loadingModal}>
+//           {loadingModal ? 'Enviando...' : 'Enviar Info'}
+//         </button>
+//         <button onClick={closeModal}>Cerrar Modal</button>
+//       </Modal>
+//     </div>
+//   );
+// };
+
+// export default TuComponente;

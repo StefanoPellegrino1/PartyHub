@@ -100,6 +100,7 @@ const Lotes = () => {
       }
     };
     agregarLote();
+    window.location.replace('')
   };
 
   return (

@@ -52,8 +52,8 @@ function App() {
       {/* <Route  path='/start' element={<Start/>}></Route>  */}
        <Route  path='' element={<Login token={token} setToken={setToken}/>}></Route> 
        <Route  path='/CreateAccount' element={<CreateUser/>}></Route> 
-    {token ? <Route path='home' element={<Home token={token}/>}></Route> : "hola" }
-      <Route  path='/dashboard' element={<Dashboard/>}>
+    {token ? <Route path='home' element={<Home token={token}/>}></Route> :  <Route  path='' element={<Login token={token} setToken={setToken}/>}></Route>  }
+    {token ?  <Route  path='/dashboard' element={<Dashboard/>}> 
       <Route path='fiesta/:id' element={<HomeCreator/>}></Route>
       <Route path='VenderEntrada/:id' element={<VenderEntrada/>}></Route>
       <Route path='vendedores/:id' element={<Vendedores/>}></Route>
@@ -61,9 +61,9 @@ function App() {
    <Route path='profile' element = {<Profile/>}></Route>
    <Route path='add_lote/:id' element={<AddLote/>}></Route>
 
-</Route> 
- <Route path='seller/:id' element={<SellerHome  />}></Route>
- <Route path='seller/VenderEntrada/:id' element={<VenderEntrada/>}></Route>
+</Route> : ""} 
+{token ? <Route path='seller/:id' element={<SellerHome  />}></Route> : "f"}
+{token ?  <Route path='seller/VenderEntrada/:id' element={<VenderEntrada/>}></Route> : ""}
      </Routes> 
   </BrowserRouter>
   </div>

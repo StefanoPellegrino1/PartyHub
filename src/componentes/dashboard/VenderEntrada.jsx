@@ -142,7 +142,7 @@ const VenderEntrada = () => {
   }else{
     console.log('banca')
   }
-
+  window.location.replace('')
   }
 
   return (
